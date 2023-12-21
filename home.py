@@ -13,6 +13,17 @@ from nltk.tokenize import word_tokenize
 import joblib
 import re
 
+# Specify the path to the NLTK data directory
+nltk_data_path = "/path/to/nltk_data"
+
+# Append the specified path to the NLTK data path
+nltk.data.path.append(nltk_data_path)
+
+# Check if punkt is already downloaded
+if not os.path.exists(os.path.join(nltk_data_path, 'tokenizers/punkt')):
+    # Download the required NLTK data
+    nltk.download('punkt')
+     
 st.set_page_config(layout="wide")
 
 st.markdown('<style>' + open('./style.css').read() + '</style>', unsafe_allow_html=True)
