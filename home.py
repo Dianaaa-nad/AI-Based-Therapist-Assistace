@@ -12,6 +12,7 @@ from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize 
 import joblib
 import re
+import os
 
 # Specify the path to the NLTK data directory
 nltk_data_path = "/path/to/nltk_data"
